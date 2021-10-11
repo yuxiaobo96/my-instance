@@ -1,0 +1,36 @@
+[general]
+log_level = 5
+log_path="/var/log/golang"
+listen="0.0.0.0:9811"
+
+[mysql]
+database="my-instance"
+user="root"
+password="Cotx2019"
+host="192.168.1.203"
+port="3306"
+max_idle = 10
+max_open = 30
+automigrate=true
+
+[redis]
+url="redis://@192.168.1.201:6379/1"
+max_idle = 3
+max_active = 30
+
+[mongo]
+conn="mongodb://192.168.1.203:27017"
+username=""
+password=""
+database="my-instance"
+index=false
+
+### 调用asset-manager获取设备信息
+#[asset_manager]
+#http = "http://127.0.0.1:9091/v2.0/asset/"
+#ak = "AKHELIUMADMINCOTX"
+
+### 调用微信API
+#[weixin_api]
+#http = "https://api.weixin.qq.com/sns/jscode2session"
+#grant_type = "authorization_code"
